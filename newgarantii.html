@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гарантии ATL SHOP</title>
+    <style>
+        :root {
+            --background-color: #f9f9f9;
+            --text-color: #000;
+            --header-bg-color: #fff;
+            --border-color: #ddd;
+            --link-color: #007bff;
+            --button-bg-color: #007bff;
+            --button-text-color: #fff;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #1e1e1e;
+            --text-color: #fff;
+            --header-bg-color: #2c2c2c;
+            --border-color: #444;
+            --link-color: #66aaff;
+            --button-bg-color: #66aaff;
+            --button-text-color: #1e1e1e;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: var(--header-bg-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        header span {
+            font-size: 14px;
+            color: var(--text-color);
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: var(--header-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .theme-toggle {
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .theme-toggle button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .theme-toggle button:hover {
+            opacity: 0.9;
+        }
+
+        .articles {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .articles li {
+            margin-bottom: 10px;
+        }
+
+        .answers {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .answers section {
+            margin-bottom: 30px;
+        }
+
+        .answers section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .answers section p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Гарантии ATL SHOP</h1>
+    </header>
+
+    <div class="theme-toggle">
+        <button onclick="toggleTheme()">Сменить тему</button>
+    </div>
+
+    <main>
+        <h2>Наши гарантии</h2>
+
+        <div class="answers">
+            <section id="question1">
+                <h3>1. Доставка товара на аккаунт клиента</h3>
+                <p>Мы гарантируем полную оплату товара с нашей стороны. Товар будет полностью оплачен и доставлен на ваш аккаунт</p>
+            </section>
+            <section id="question2">
+                <h3>2. Только легальные пути покупки товаров</h3>
+                <p>Все товары доставляются на ваш аккаунт легальным путем и не нарушает правила разработчиков</p>
+            </section>
+            <section id="question3">
+                <h3>3. Помощь поддержки клиентам</h3>
+                <p>Поддержка поможет вам с любым вопросом касаемо выполнения заказа, если это понадобится</p>
+		<p><b>Обратите внимание.</b> Магазин не несет ответственность за ваш аккаунт и учетную запись, не делитесь информацией касаемо ваших покупок в нашем магазине с лицами, которым вы не доверяете</p>
+
+<p><b>Случаев бана не было.</b> Но если вы переживаете за свой аккаунт, то можете приобретать товары на свой второй аккаунт и дарить их себе на основной</p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'light');
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        // Устанавливаем светлую тему по умолчанию
+        document.body.setAttribute('data-theme', 'light');
+    </script>
+
+</body>
+
+</html>
